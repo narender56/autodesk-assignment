@@ -1,0 +1,14 @@
+// stylelint-disable no-eol-whitespace
+
+$sizes: (
+  14: 0.875rem,
+  16: 1rem,
+  22: 1.375rem
+  );
+
+@each $name,
+$val in $sizes {
+  .f#{$name} {
+    font-size: #{$val};
+  }
+}

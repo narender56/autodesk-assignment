@@ -1,0 +1,24 @@
+@import './styles/main.scss';
+
+body {
+  margin: 0;
+  font-family: "ARTIFAKT ELEMENT REGULAR","opensans-light","Helvetica Neue Thin","Helvetica Light",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: normal;
+  height: 100%;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  min-height: 100vh;
+  position: relative;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

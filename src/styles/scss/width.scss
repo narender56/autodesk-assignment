@@ -1,0 +1,54 @@
+// stylelint-disable no-eol-whitespace
+
+@import './mixin.scss';
+
+/* Widths */
+
+$widths: (
+  0: 0,
+  auto: auto,
+  '10p': 10%,
+  '20p': 20%,
+  '24p': 24%,
+  '25p': 25%,
+  '30p': 30%,
+  '49p': 49%,
+  '96p': 96%,
+  '100p': 100%
+);
+
+@each $name, $val in $widths {
+  .w#{$name} {
+    width: #{$val};
+  }
+
+  .minw#{$name} {
+    min-width: #{$val};
+  }
+
+  .maxw#{$name} {
+    max-width: #{$val};
+  }
+
+  .flex#{$name} {
+    flex: 0 0 #{$val};
+  }
+}
+
+@each $name, $val in $widths {
+  @include mb(w#{$name}) {
+    width: #{$val};
+  }
+}
+
+@each $name, $val in $widths {
+  @include tb(w#{$name}) {
+    width: #{$val};
+  }
+}
+
+@each $name, $val in $widths {
+  @include dk(w#{$name}) {
+    width: #{$val};
+  }
+}

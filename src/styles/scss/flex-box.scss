@@ -1,0 +1,35 @@
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-flow: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+
+/* Justify Content */
+$justifies: (justify-end: flex-end,
+  justify-center: center,
+  justify-between: space-between);
+
+@each $name,
+$val in $justifies {
+  .#{$name} {
+    justify-content: #{$val};
+  }
+}
+
+/* Align Items */
+
+$aligns: (align-center: center);
+
+@each $name,
+$val in $aligns {
+  .#{$name} {
+    align-items: #{$val};
+  }
+}

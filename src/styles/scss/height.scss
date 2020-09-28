@@ -1,0 +1,24 @@
+// stylelint-disable no-eol-whitespace
+
+/* Heights */
+
+$heights: (
+  0: 0,
+  10: 0.625rem,
+  38: 2.375rem,
+  40: 2.5rem,
+  auto: auto,
+  '90p': 90%,
+  '100p': 100%,
+  '100vh': 100vh
+);
+
+@each $name, $val in $heights {
+  .h#{$name} {
+    height: #{$val};
+  }
+
+  .minh#{$name} {
+    min-height: #{$val};
+  }
+}

@@ -1,0 +1,13 @@
+// stylelint-disable no-eol-whitespace
+
+$line-heights: (
+  20: 1.25rem,
+  22: 1.375rem,
+  28: 1.75rem
+);
+
+@each $name, $val in $line-heights {
+  .lh#{$name} {
+    line-height: #{$val};
+  }
+}

@@ -1,0 +1,47 @@
+
+$tablet-width: 48rem; // 768px
+$desktop-width: 64rem; // 1024px
+
+@mixin mobile {
+  @media (max-width: #{$tablet-width - 0.0625rem}) {
+    /* stylelint-disable-line media-feature-no-missing-punctuation */
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin mb($name) {
+  .#{$name}-mb {
+    @include mobile {
+      @content;
+    }
+  }
+}
+
+@mixin tb($name) {
+  .#{$name}-tb {
+    @include tablet {
+      @content;
+    }
+  }
+}
+
+
+@mixin dk($name) {
+  .#{$name}-dk {
+    @include desktop {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+// stylelint-disable no-eol-whitespace
+
+$border-radii: (
+  '': '',
+  t: -top,
+  b: -bottom,
+  l: -left,
+  r: -right,
+  tr: -top-right,
+  br: -bottom-right,
+  bl: -bottom-left,
+  tl: -top-left
+);
+
+$radii: (
+  '': 0.0625rem,
+  4: 0.25rem,
+  5: 0.313rem,
+);
+
+@each $name, $val in $border-radii {
+  @each $radName, $radValue in $radii {
+    .br#{$name}#{$radName} {
+      border#{$val}-radius: #{$radValue};
+    }
+  }
+}
